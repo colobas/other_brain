@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@master
     - uses: anglinb/foam-capture-action@main
       with: 
-        capture: $
+        capture: ${{ github.event.inputs.data }}
     - run: |
         git config --local user.email "mail@gpir.es"
         git config --local user.name "colobas"
